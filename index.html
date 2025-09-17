@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TUPE - Tobacco Use Prevention Education</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link id="theme-link" rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #0d6b63; z-index:1000;">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">TUPE</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+
+        <!-- Resources Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Resources
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="resourcesDropdown">
+            <li><a class="dropdown-item" href="resources/articles.html">Articles</a></li>
+            <li><a class="dropdown-item" href="resources/hotlines.html">Hotlines</a></li>
+            <li><a class="dropdown-item" href="resources/video.html">Videos</a></li>
+            <li><a class="dropdown-item" href="resources/education.html">Education</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="donate.html">Donate</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="faq.html">FAQ</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="events.html">Events</a>
+        </li>
+        <li class="nav-item">
+          <button id="theme-toggle" class="btn btn-sm btn-outline-light">Dark Mode</button>
+        </li>
+        
+
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Hero -->
+  <section class="hero text-center d-flex align-items-center fade-section">
+    <div class="container">
+      <h1 class="display-4 fw-bold">Tobacco Use Prevention Education</h1>
+      <p class="lead mt-3">
+        Empowering students with knowledge and resources to make healthy, tobacco-free choices.
+      </p>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-5 text-center fade-section">
+    <div class="container">
+      <a><h2 class="mb-4">About TUPE</h2></a>
+      <p class="">
+        TUPE is dedicated to preventing tobacco use through education, awareness, and community support. 
+        We provide resources, workshops, and peer-led programs to encourage healthy, tobacco-free lifestyles.
+      </p>
+    </div>
+  </section>
+
+  <!-- Resources -->
+  <section id="resources" class="py-5 fade-section">
+    <div class="container">
+      <h2 class="text-center mb-5">Resources</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card resource-card h-100">
+            <div class="card-body">
+              <h5 class="card-title text-success">Articles</h5>
+              <p class="card-text">Educational articles about tobacco risks and prevention strategies.</p>
+            </div>
+          </div>
+        </div>
+        <a href="resources/hotlines.html" class="resource-links">
+        <div class="col-md-4">
+          <div class="card resource-card h-100">
+            <div class="card-body">
+              <h5 class="card-title text-success">Hotlines</h5>
+              <p class="card-text">Access to free support and counseling to quit tobacco.</p>
+            </div>
+          </div>
+        </div>
+        </a>
+        <div class="col-md-4">
+          <div class="card resource-card h-100">
+            <div class="card-body">
+              <h5 class="card-title text-success">Videos</h5>
+              <p class="card-text">Watch inspiring stories and prevention messages from peers.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Get Involved -->
+  <section id="involved" class="py-5 text-center fade-section">
+    <div class="container">
+      <h2 class="mb-4">Get Involved</h2>
+      <p class="mb-4">
+        Join TUPE in spreading awareness and helping your community stay tobacco-free.
+      </p>
+      <a href="donate.html" class="btn btn-success btn-lg">Donate / Contact Us</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="bg-success text-white py-4 fade-section">
+    <div class="container text-center">
+      <p class="mb-1">© 2025 TUPE Club. All rights reserved.</p>
+      <p>Email: <a href="mailto:info@tupeclub.org" class="text-white text-decoration-underline">info@tupeclub.org</a></p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+  <!-- Custom JS -->
+  <script>
+    $(document).ready(function(){
+
+      // Navbar shadow on scroll
+      $(window).scroll(function() {
+        if($(this).scrollTop() > 50){
+          $('.navbar').addClass('scrolled');
+        } else {
+          $('.navbar').removeClass('scrolled');
+        }
+      });
+
+      // Smooth scrolling for navbar links
+      $('a.nav-link[href^="#"]').on('click', function(event){
+        var target = $(this.getAttribute('href'));
+        if(target.length){
+          event.preventDefault();
+          $('html, body').animate({
+            scrollTop: target.offset().top - 70
+          }, 800);
+        }
+      });
+
+      // Fade-in sections on scroll
+      function fadeInSections() {
+        $('.fade-section').each(function(){
+          var topOfWindow = $(window).scrollTop();
+          var elemTop = $(this).offset().top;
+          if(topOfWindow + $(window).height() > elemTop + 100){
+            $(this).addClass('visible');
+          }
+        });
+      }
+      fadeInSections();
+      $(window).scroll(fadeInSections);
+
+      // Button hover effect
+      $('.btn-success').hover(
+        function(){ $(this).addClass('btn-hover'); },
+        function(){ $(this).removeClass('btn-hover'); }
+      );
+
+    });
+    
+    
+  const themeToggle = document.getElementById('theme-toggle');
+  const themeLink = document.getElementById('theme-link');
+
+  let savedTheme = localStorage.getItem('theme') || 'light';
+  applyTheme(savedTheme);
+
+  themeToggle.addEventListener('click', () => {
+    let currentTheme = localStorage.getItem('theme') || 'light';
+    let newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    applyTheme(newTheme);
+  });
+
+  function applyTheme(theme) {
+    if (theme === 'dark') {
+      themeLink.href = 'darkstyles.css';
+      themeToggle.textContent = 'Light Mode';
+    } else {
+      themeLink.href = 'style.css';
+      themeToggle.textContent = 'Dark Mode';
+    }
+    localStorage.setItem('theme', theme);
+  }
+
+
+  </script>
+  <!--dark mode toggle-->
+  <script>
+  const themeToggle = document.getElementById('theme-toggle');
+  const themeLink = document.getElementById('theme-link');
+
+  // Apply saved theme from localStorage or default to light
+  let savedTheme = localStorage.getItem('theme') || 'light';
+  applyTheme(savedTheme);
+
+  themeToggle.addEventListener('click', () => {
+    let currentTheme = localStorage.getItem('theme') || 'light';
+    let newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    applyTheme(newTheme);
+  });
+
+  function applyTheme(theme) {
+    if (theme === 'dark') {
+      themeLink.href = 'darkstyles.css';
+      themeToggle.textContent = 'Light Mode';
+    } else {
+      themeLink.href = 'style.css';
+      themeToggle.textContent = 'Dark Mode';
+    }
+    localStorage.setItem('theme', theme);
+  }
+</script>
+
+  
+  <!--<style>
+      .hero {
+    height: 80vh; /* or 100vh for full screen */
+    
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+  </style>-->
+</body>
+</html>
