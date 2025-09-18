@@ -1,166 +1,364 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About TUPE | TUPE</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About TUPE | TUPE</title>
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
-  <!-- Custom CSS -->
-  <link id="theme-link" rel="stylesheet" href="style.css">
+    <!-- Custom CSS -->
+    <link id="theme-link" rel="stylesheet" href="style.css" />
 
-  <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-</head>
-<body>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark sticky-top"
+      style="background-color: #0d6b63; z-index: 1000"
+    >
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">TUPE</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
 
-  <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #0d6b63; z-index:1000;">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="index.html">TUPE</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
+            <!-- Resources Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="resourcesDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Resources
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="resourcesDropdown">
+                <li>
+                  <a class="dropdown-item" href="resources/articles.html"
+                    >Articles</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="resources/hotlines.html"
+                    >Hotlines</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="resources/video.html"
+                    >Videos</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="resources/education.html"
+                    >Education</a
+                  >
+                </li>
+              </ul>
+            </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">Home</a>
-        </li>
+            <li class="nav-item">
+              <a class="nav-link" href="donate.html">Donate</a>
+            </li>
 
-        <!-- Resources Dropdown -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Resources
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="resourcesDropdown">
-            <li><a class="dropdown-item" href="resources/articles.html">Articles</a></li>
-            <li><a class="dropdown-item" href="resources/hotlines.html">Hotlines</a></li>
-            <li><a class="dropdown-item" href="resources/video.html">Videos</a></li>
-            <li><a class="dropdown-item" href="resources/education.html">Education</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="faq.html">FAQ</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="events.html">Events</a>
+            </li>
+            <li class="nav-item">
+              <button id="theme-toggle" class="btn btn-sm btn-outline-light">
+                Dark Mode
+              </button>
+            </li>
           </ul>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="donate.html">Donate</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="about.html">About</a>
-        </li>
-        
-        <li class="nav-item">
-          <a class="nav-link" href="faq.html">FAQ</a>
-        </li>
-        
-        <li class="nav-item">
-          <a class="nav-link" href="events.html">Events</a>
-        </li>
-        <li class="nav-item">
-          <button id="theme-toggle" class="btn btn-sm btn-outline-light">Dark Mode</button>
-        </li>
-
-
-      </ul>
-    </div>
-  </div>
-</nav>
-
-  <!-- Hero Section -->
-  <section class="hero text-center d-flex align-items-center fade-section">
-    <div class="container">
-      <h1 class="display-4 fw-bold">About TUPE</h1>
-      <p class="lead mt-3">TUPE – Tobacco Use Prevention Education – is dedicated to educating and empowering communities to prevent tobacco use.</p>
-    </div>
-  </section>
-
-  <!-- About Content -->
-  <section class="py-5 fade-section">
-    <div class="container">
-      <div class="row g-5 align-items-center">
-
-        <div class="col-md-6">
-          <img src="https://images.unsplash.com/photo-1588776814546-7f29df8e0f4b?auto=format&fit=crop&w=800&q=80" class="img-fluid rounded shadow" alt="TUPE Education">
         </div>
-
-        <div class="col-md-6">
-          <h2 class="mb-3">Our Mission</h2>
-          <p>TUPE's mission is to reduce tobacco use by providing education, resources, and support to individuals of all ages. We believe that informed communities make healthier choices.</p>
-
-          <h2 class="mb-3 mt-4">What We Do</h2>
-          <ul>
-            <li>Provide resources and support to quit tobacco use.</li>
-            <li>Host educational programs and community outreach events.</li>
-            <li>Raise awareness about the dangers of tobacco and nicotine products.</li>
-            <li>Support youth tobacco prevention initiatives.</li>
-          </ul>
-
-          <h2 class="mb-3 mt-4">Get Involved</h2>
-          <p>Join TUPE's efforts to make a difference in your community! Whether volunteering, donating, or sharing resources, your participation helps create a tobacco-free future.</p>
-        </div>
-
       </div>
-    </div>
-  </section>
+    </nav>
 
-  <!-- Footer -->
-  <footer class="bg-success text-white py-4 text-center">
-    <p>© 2025 TUPE Club. All rights reserved.</p>
-    <p>Email: <a href="mailto:ghstupeclub@gmail.com" class="text-white text-decoration-underline">ghstupeclub@gmail.com</a></p>
-  </footer>
+    <!-- Hero Section -->
+    <section class="hero text-center d-flex align-items-center fade-section">
+      <div class="container">
+        <h1 class="display-4 fw-bold">About TUPE</h1>
+        <p class="lead mt-3">
+          TUPE – Tobacco Use Prevention Education – is dedicated to educating
+          and empowering communities to prevent tobacco use.
+        </p>
+      </div>
+    </section>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- About Content -->
+    <section class="py-5 fade-section">
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <div class="col-md-6">
+            <img
+              src="https://images.unsplash.com/photo-1588776814546-7f29df8e0f4b?auto=format&fit=crop&w=800&q=80"
+              class="img-fluid rounded shadow"
+              alt="TUPE Education"
+            />
+          </div>
 
-  <!-- jQuery fade-in -->
-  <script>
-    $(document).ready(function() {
-      function fadeInSections() {
-        $('.fade-section').each(function(){
-          var topOfWindow = $(window).scrollTop();
-          var elemTop = $(this).offset().top;
-          if(topOfWindow + $(window).height() > elemTop + 100){
-            $(this).addClass('visible');
+          <div class="col-md-6">
+            <h2 class="mb-3">Our Mission</h2>
+            <p>
+              TUPE's mission is to reduce tobacco use by providing education,
+              resources, and support to individuals of all ages. We believe that
+              informed communities make healthier choices.
+            </p>
+
+            <h2 class="mb-3 mt-4">What We Do</h2>
+            <ul>
+              <li>Provide resources and support to quit tobacco use.</li>
+              <li>Host educational programs and community outreach events.</li>
+              <li>
+                Raise awareness about the dangers of tobacco and nicotine
+                products.
+              </li>
+              <li>Support youth tobacco prevention initiatives.</li>
+            </ul>
+
+            <h2 class="mb-3 mt-4">Get Involved</h2>
+            <p>
+              Join TUPE's efforts to make a difference in your community!
+              Whether volunteering, donating, or sharing resources, your
+              participation helps create a tobacco-free future.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-success text-white py-4 text-center">
+      <p>© 2025 TUPE Club. All rights reserved.</p>
+      <p>
+        Email:
+        <a
+          href="mailto:ghstupeclub@gmail.com"
+          class="text-white text-decoration-underline"
+          >ghstupeclub@gmail.com</a
+        >
+      </p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- jQuery fade-in -->
+    <script>
+      $(document).ready(function () {
+        function fadeInSections() {
+          $(".fade-section").each(function () {
+            var topOfWindow = $(window).scrollTop();
+            var elemTop = $(this).offset().top;
+            if (topOfWindow + $(window).height() > elemTop + 100) {
+              $(this).addClass("visible");
+            }
+          });
+        }
+        fadeInSections();
+        $(window).scroll(fadeInSections);
+      });
+    </script>
+    <!--dark mode toggle-->
+    <script>
+      const themeToggle = document.getElementById("theme-toggle");
+      const themeLink = document.getElementById("theme-link");
+
+      // Apply saved theme from localStorage or default to light
+      let savedTheme = localStorage.getItem("theme") || "light";
+      applyTheme(savedTheme);
+
+      themeToggle.addEventListener("click", () => {
+        let currentTheme = localStorage.getItem("theme") || "light";
+        let newTheme = currentTheme === "light" ? "dark" : "light";
+        applyTheme(newTheme);
+      });
+
+      function applyTheme(theme) {
+        if (theme === "dark") {
+          themeLink.href = "darkstyles.css";
+          themeToggle.textContent = "Light Mode";
+        } else {
+          themeLink.href = "style.css";
+          themeToggle.textContent = "Dark Mode";
+        }
+        localStorage.setItem("theme", theme);
+      }
+    </script>
+    <div id="ai-chatbot">
+      <div id="chatbot-container">
+        <button id="chatbot-toggle">
+          <i class="bi bi-chat-dots-fill"></i>
+        </button>
+        <div id="chatbot-box" class="hidden">
+          <div id="chatbot-header">
+            <span>Navigation Assistant</span>
+            <button id="chatbot-close"><i class="bi bi-x-lg"></i></button>
+          </div>
+          <div id="chatbot-messages"></div>
+          <div id="chatbot-input-area">
+            <input
+              type="text"
+              id="chatbot-input"
+              placeholder="Ask me something..."
+            />
+            <button id="chatbot-send"><i class="bi bi-send-fill"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        const chatbotToggle = document.getElementById("chatbot-toggle");
+        const chatbotBox = document.getElementById("chatbot-box");
+        const chatbotClose = document.getElementById("chatbot-close");
+        const chatbotMessages = document.getElementById("chatbot-messages");
+        const chatbotInput = document.getElementById("chatbot-input");
+        const chatbotSend = document.getElementById("chatbot-send");
+
+        const navLinks = {
+          home: "index.html",
+          contact: "contact.html",
+          about: "about.html",
+          faq: "faq.html",
+          events: "events.html",
+          donate: "donate.html",
+          articles: "resources/articles.html",
+          hotlines: "resources/hotlines.html",
+          videos: "resources/video.html",
+          education: "resources/education.html",
+          resources: "index.html#resources",
+          involved: "index.html#involved",
+        };
+
+        // Load saved messages from sessionStorage
+        function loadMessages() {
+          const saved = JSON.parse(
+            sessionStorage.getItem("chatHistory") || "[]"
+          );
+          chatbotMessages.innerHTML = "";
+          saved.forEach((msg) => addMessage(msg.text, msg.sender, false));
+        }
+
+        function saveMessage(text, sender) {
+          let history = JSON.parse(
+            sessionStorage.getItem("chatHistory") || "[]"
+          );
+          history.push({ text, sender });
+          sessionStorage.setItem("chatHistory", JSON.stringify(history));
+        }
+
+        function addMessage(
+          text,
+          sender = "bot",
+          save = true,
+          animate = false
+        ) {
+          const msg = document.createElement("div");
+          msg.classList.add("chat-message", sender);
+          chatbotMessages.appendChild(msg);
+
+          if (animate && sender === "bot") {
+            let i = 0;
+            const typing = setInterval(() => {
+              msg.textContent += text.charAt(i);
+              i++;
+              chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+              if (i >= text.length) {
+                clearInterval(typing);
+                if (save) saveMessage(text, sender);
+              }
+            }, 25); // typing speed (ms per character)
+          } else {
+            msg.textContent = text;
+            if (save) saveMessage(text, sender);
+          }
+
+          chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+        }
+
+        function handleUserMessage(input) {
+          addMessage(input, "user");
+          let response =
+            "Sorry, I didn't understand. Try asking about Contact, About, or Events.";
+          input = input.toLowerCase();
+
+          for (let key in navLinks) {
+            if (input.includes(key)) {
+              response = `Opening ${key} page...`;
+              setTimeout(() => {
+                window.location.href = navLinks[key];
+              }, 1200);
+              break;
+            }
+          }
+
+          if (input.includes("hello") || input.includes("hi")) {
+            response = "Hello 👋! How can I help you today?";
+          } else if (input.includes("help")) {
+            response =
+              "I can guide you to Contact, About, Events, FAQ, and Resources.";
+          }
+
+          addMessage(response, "bot", true, true); // animate typing
+        }
+
+        chatbotToggle.addEventListener("click", () => {
+          chatbotBox.classList.toggle("show");
+          if (chatbotBox.classList.contains("show")) loadMessages();
+        });
+
+        chatbotClose.addEventListener("click", () => {
+          chatbotBox.classList.remove("show");
+        });
+
+        chatbotSend.addEventListener("click", () => {
+          if (chatbotInput.value.trim()) {
+            handleUserMessage(chatbotInput.value.trim());
+            chatbotInput.value = "";
           }
         });
-      }
-      fadeInSections();
-      $(window).scroll(fadeInSections);
-    });
-  </script>
-  <!--dark mode toggle-->
-  <script>
-  const themeToggle = document.getElementById('theme-toggle');
-  const themeLink = document.getElementById('theme-link');
 
-  // Apply saved theme from localStorage or default to light
-  let savedTheme = localStorage.getItem('theme') || 'light';
-  applyTheme(savedTheme);
-
-  themeToggle.addEventListener('click', () => {
-    let currentTheme = localStorage.getItem('theme') || 'light';
-    let newTheme = currentTheme === 'light' ? 'dark' : 'light';
-    applyTheme(newTheme);
-  });
-
-  function applyTheme(theme) {
-    if (theme === 'dark') {
-      themeLink.href = 'darkstyles.css';
-      themeToggle.textContent = 'Light Mode';
-    } else {
-      themeLink.href = 'style.css';
-      themeToggle.textContent = 'Dark Mode';
-    }
-    localStorage.setItem('theme', theme);
-  }
-</script>
-  
-
-</body>
+        chatbotInput.addEventListener("keypress", (e) => {
+          if (e.key === "Enter" && chatbotInput.value.trim()) {
+            handleUserMessage(chatbotInput.value.trim());
+            chatbotInput.value = "";
+          }
+        });
+      </script>
+    </div>
+  </body>
 </html>

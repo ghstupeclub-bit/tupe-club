@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Education | TUPE</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" id="theme-link" href="../style.css" />
+
+    <style>
+      /* Animate resource cards on hover */
+      .resource-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+      }
+
+      .resource-card:hover {
+        transform: translateY(-10px) scale(1.03);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Fade-in animation for cards */
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .resource-card.visible {
+        animation: fadeInUp 0.6s ease forwards;
+      }
+    </style>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-dark sticky-top"
+      style="background-color: #0d6b63; z-index: 1000"
+    >
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">TUPE</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="resourcesDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Resources
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="resourcesDropdown">
+                <li>
+                  <a class="dropdown-item" href="articles.html">Articles</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="hotlines.html">Hotlines</a>
+                </li>
+                <li><a class="dropdown-item" href="video.html">Videos</a></li>
+                <li>
+                  <a class="dropdown-item" href="education.html">Education</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../donate.html">Donate</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../faq.html">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../events.html">Events</a>
+            </li>
+            <li class="nav-item">
+              <button id="theme-toggle" class="btn btn-sm btn-outline-light">
+                Dark Mode
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero text-center d-flex align-items-center fade-section">
+      <div class="container">
+        <h1 class="display-4 fw-bold">Tobacco Education</h1>
+        <p class="lead mt-3">
+          Learn about the effects of tobacco, the science behind addiction, and
+          healthier alternatives.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-5 fade-section">
+      <div class="container">
+        <h2 class="text-center mb-5">Educational Resources</h2>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="card h-100 resource-card">
+              <div class="card-body">
+                <h5 class="card-title text-success">
+                  Health Effects of Smoking & Vaping
+                </h5>
+                <p class="card-text">
+                  Explore how tobacco use impacts the lungs, heart, and overall
+                  health with scientific evidence from the CDC.
+                </p>
+                <a
+                  href="https://www.cdc.gov/tobacco/about/?CDC_AAref_Val=https://www.cdc.gov/tobacco/basic_information/health_effects/index.htm"
+                  class="btn btn-success"
+                  target="_blank"
+                  >Learn More</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card h-100 resource-card">
+              <div class="card-body">
+                <h5 class="card-title text-success">
+                  The Science of Nicotine Addiction
+                </h5>
+                <p class="card-text">
+                  Understand the powerful effects of nicotine on the brain and
+                  why it's so hard to quit.
+                </p>
+                <a
+                  href="https://www.undo.org/exposed/big-tobacco-fantasyland?gad_source=1&gad_campaignid=21255861559&gbraid=0AAAAABTaA2WlulF3u8CsBaNDR07amCCDC&gclid=Cj0KCQjwuKnGBhD5ARIsAD19RsaVD_5QidAM_8tMhcvlcnLJLfEz7ZKV_nUt65mmtJdvWwL1JpShoZ8aAkooEALw_wcB"
+                  class="btn btn-success"
+                  target="_blank"
+                  >Learn More</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card h-100 resource-card">
+              <div class="card-body">
+                <h5 class="card-title text-success">
+                  Vaping vs. Smoking: The Real Facts
+                </h5>
+                <p class="card-text">
+                  Debunking myths and providing clear, evidence-based
+                  information on the differences and risks of vaping and
+                  smoking.
+                </p>
+                <a
+                  href="https://www.hopkinsmedicine.org/health/wellness-and-prevention/5-truths-you-need-to-know-about-vaping"
+                  class="btn btn-success"
+                  target="_blank"
+                  >Learn More</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card h-100 resource-card">
+              <div class="card-body">
+                <h5 class="card-title text-success">
+                  Protecting Youth from Tobacco
+                </h5>
+                <p class="card-text">
+                  Tools and resources for parents and educators to talk with
+                  teens about the dangers of tobacco and nicotine products.
+                </p>
+                <a
+                  href="https://www.cdc.gov/tobacco/e-cigarettes/protecting-youth.html"
+                  class="btn btn-success"
+                  target="_blank"
+                  >Learn More</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card h-100 resource-card">
+              <div class="card-body">
+                <h5 class="card-title text-success">
+                  The Environmental Impact of Tobacco
+                </h5>
+                <p class="card-text">
+                  Learn about the pollution caused by cigarette butts,
+                  packaging, and the environmental damage from tobacco farming.
+                </p>
+                <a
+                  href="https://ash.org.uk/resources/view/tobacco-and-the-environment"
+                  class="btn btn-success"
+                  target="_blank"
+                  >Learn More</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card h-100 resource-card">
+              <div class="card-body">
+                <h5 class="card-title text-success">
+                  The True Cost of Smoking
+                </h5>
+                <p class="card-text">
+                  Use an interactive calculator to see how much money can be
+                  saved by quitting and avoiding health-related costs.
+                </p>
+                <a
+                  href="https://smokefree.gov/quit-smoking/why-you-should-quit/how-much-will-you-save"
+                  class="btn btn-success"
+                  target="_blank"
+                  >Calculate Savings</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-success text-white py-4 text-center">
+      <p>© 2025 TUPE Club. All rights reserved.</p>
+      <p>
+        Email:
+        <a
+          href="mailto:ghstupeclub@gmail.com"
+          class="text-white text-decoration-underline"
+          >ghstupeclub@gmail.com</a
+        >
+      </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        // Navbar shadow on scroll
+        $(window).scroll(function () {
+          if ($(this).scrollTop() > 50) {
+            $(".navbar").addClass("scrolled");
+          } else {
+            $(".navbar").removeClass("scrolled");
+          }
+        });
+
+        // Fade-in sections on scroll
+        function fadeInSections() {
+          $(".fade-section").each(function () {
+            var topOfWindow = $(window).scrollTop();
+            var elemTop = $(this).offset().top;
+            if (topOfWindow + $(window).height() > elemTop + 100) {
+              $(this).addClass("visible");
+            }
+          });
+        }
+        fadeInSections();
+        $(window).scroll(fadeInSections);
+
+        // Fade-in cards on scroll
+        function fadeInCards() {
+          $(".resource-card").each(function () {
+            var topOfWindow = $(window).scrollTop();
+            var elemTop = $(this).offset().top;
+            if (topOfWindow + $(window).height() > elemTop + 50) {
+              $(this).addClass("visible");
+            }
+          });
+        }
+        fadeInCards();
+        $(window).scroll(fadeInCards);
+      });
+    </script>
+
+    <script>
+      const themeToggle = document.getElementById("theme-toggle");
+      const themeLink = document.getElementById("theme-link");
+
+      let savedTheme = localStorage.getItem("theme") || "light";
+      applyTheme(savedTheme);
+
+      themeToggle.addEventListener("click", () => {
+        let currentTheme = localStorage.getItem("theme") || "light";
+        let newTheme = currentTheme === "light" ? "dark" : "light";
+        applyTheme(newTheme);
+      });
+
+      function applyTheme(theme) {
+        if (theme === "dark") {
+          themeLink.href = "../darkstyles.css";
+          themeToggle.textContent = "Light Mode";
+        } else {
+          themeLink.href = "../style.css";
+          themeToggle.textContent = "Dark Mode";
+        }
+        localStorage.setItem("theme", theme);
+      }
+    </script>
+
+    <!-- AI Chatbot -->
+    <div id="ai-chat">
+      <div id="ai-chatbot">
+        <div id="chatbot-container">
+          <button id="chatbot-toggle">
+            <i class="bi bi-chat-dots-fill"></i>
+          </button>
+          <div id="chatbot-box" class="hidden">
+            <div id="chatbot-header">
+              <span>Navigation Assistant</span>
+              <button id="chatbot-close"><i class="bi bi-x-lg"></i></button>
+            </div>
+            <div id="chatbot-messages"></div>
+            <div id="chatbot-input-area">
+              <input
+                type="text"
+                id="chatbot-input"
+                placeholder="Ask me something..."
+              />
+              <button id="chatbot-send"><i class="bi bi-send-fill"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        const chatbotToggle = document.getElementById("chatbot-toggle");
+        const chatbotBox = document.getElementById("chatbot-box");
+        const chatbotClose = document.getElementById("chatbot-close");
+        const chatbotMessages = document.getElementById("chatbot-messages");
+        const chatbotInput = document.getElementById("chatbot-input");
+        const chatbotSend = document.getElementById("chatbot-send");
+
+        const navLinks = {
+          home: "../index.html",
+          contact: "../contact.html",
+          about: "../about.html",
+          faq: "../faq.html",
+          events: "../events.html",
+          donate: "../donate.html",
+          articles: "articles.html",
+          hotlines: "hotlines.html",
+          videos: "video.html",
+          education: "education.html",
+          resources: "../index.html#resources",
+          involved: "../index.html#involved",
+        };
+
+        function loadMessages() {
+          const saved = JSON.parse(
+            sessionStorage.getItem("chatHistory") || "[]"
+          );
+          chatbotMessages.innerHTML = "";
+          saved.forEach((msg) => addMessage(msg.text, msg.sender, false));
+        }
+
+        function saveMessage(text, sender) {
+          let history = JSON.parse(
+            sessionStorage.getItem("chatHistory") || "[]"
+          );
+          history.push({ text, sender });
+          sessionStorage.setItem("chatHistory", JSON.stringify(history));
+        }
+
+        function addMessage(
+          text,
+          sender = "bot",
+          save = true,
+          animate = false
+        ) {
+          const msg = document.createElement("div");
+          msg.classList.add("chat-message", sender);
+          chatbotMessages.appendChild(msg);
+
+          if (animate && sender === "bot") {
+            let i = 0;
+            const typing = setInterval(() => {
+              msg.textContent += text.charAt(i);
+              i++;
+              chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+              if (i >= text.length) {
+                clearInterval(typing);
+                if (save) saveMessage(text, sender);
+              }
+            }, 25);
+          } else {
+            msg.textContent = text;
+            if (save) saveMessage(text, sender);
+          }
+
+          chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+        }
+
+        function handleUserMessage(input) {
+          addMessage(input, "user");
+          let response =
+            "Sorry, I didn't understand. Try asking about Contact, About, or Events.";
+          input = input.toLowerCase();
+
+          for (let key in navLinks) {
+            if (input.includes(key)) {
+              response = `Opening ${key} page...`;
+              setTimeout(() => {
+                window.location.href = navLinks[key];
+              }, 1200);
+              break;
+            }
+          }
+
+          if (input.includes("hello") || input.includes("hi")) {
+            response = "Hello 👋! How can I help you today?";
+          } else if (input.includes("help")) {
+            response =
+              "I can guide you to Contact, About, Events, FAQ, and Resources.";
+          }
+
+          addMessage(response, "bot", true, true);
+        }
+
+        chatbotToggle.addEventListener("click", () => {
+          chatbotBox.classList.toggle("show");
+          if (chatbotBox.classList.contains("show")) loadMessages();
+        });
+
+        chatbotClose.addEventListener("click", () => {
+          chatbotBox.classList.remove("show");
+        });
+
+        chatbotSend.addEventListener("click", () => {
+          if (chatbotInput.value.trim()) {
+            handleUserMessage(chatbotInput.value.trim());
+            chatbotInput.value = "";
+          }
+        });
+
+        chatbotInput.addEventListener("keypress", (e) => {
+          if (e.key === "Enter" && chatbotInput.value.trim()) {
+            handleUserMessage(chatbotInput.value.trim());
+            chatbotInput.value = "";
+          }
+        });
+      </script>
+    </div>
+  </body>
+</html>

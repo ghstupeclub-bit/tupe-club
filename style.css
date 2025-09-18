@@ -1,158 +1,311 @@
 /* ===== Global Styles ===== */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #e6f2f2;
-    color: #0d6b63;
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e6f2f2;
+  color: #0d6b63;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
 }
 
 a {
-    text-decoration: none;
-    transition: color 0.3s ease;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #20c997;
+  color: #20c997;
 }
 
 /* ===== Navbar ===== */
 .navbar-nav .nav-link {
-    font-weight: 600;
-    margin-left: 15px;
-    transition: color 0.3s ease;
+  font-weight: 600;
+  margin-left: 15px;
+  transition: color 0.3s ease;
 }
 
 .navbar-nav .nav-link:hover {
-    color: #20c997;
+  color: #20c997;
 }
 
 .navbar.scrolled {
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
 }
 
 /* ===== Hero Section ===== */
 .hero {
-    height: 50vh;
-    background: linear-gradient(rgba(13,107,99,0.85), rgba(13,75,99,0.85)), url('https://images.unsplash.com/photo-1617196039272-0b9d9d29f8a0?auto=format&fit=crop&w=1950&q=80') no-repeat center center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #ffffff;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
-    text-align: center;
+  height: 50vh;
+  background: linear-gradient(rgba(13, 107, 99, 0.85), rgba(13, 75, 99, 0.85)),
+    url("https://images.unsplash.com/photo-1617196039272-0b9d9d29f8a0?auto=format&fit=crop&w=1950&q=80")
+      no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  text-align: center;
 }
 
 .hero h1 {
-    font-size: 3rem;
+  font-size: 3rem;
 }
-.hero h1, .hero h2, .hero h3 {
-    color: #ffffff;
+.hero h1,
+.hero h2,
+.hero h3 {
+  color: #ffffff;
 }
 
 .hero p {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 /* ===== Fade-in Sections ===== */
 .fade-section {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 1s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease;
 }
 
 .fade-section.visible {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* ===== Buttons ===== */
 .btn-success {
-    background-color: #0d6b63;
-    border: none;
-    transition: all 0.3s ease;
+  background-color: #0d6b63;
+  border: none;
+  transition: all 0.3s ease;
 }
 
 .btn-success:hover {
-    background-color: #20c997;
-    color: #fff;
+  background-color: #20c997;
+  color: #fff;
 }
 
 /* ===== Forms ===== */
 .form-control:focus {
-    border-color: #20c997;
-    box-shadow: 0 0 5px rgba(32,201,151,0.5);
+  border-color: #20c997;
+  box-shadow: 0 0 5px rgba(32, 201, 151, 0.5);
 }
 
 textarea.form-control {
-    resize: none;
+  resize: none;
 }
 
 /* ===== Cards (Hotlines / Resources) ===== */
 .resource-card {
-    border: 1px solid #0d6b63;
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #0d6b63;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .resource-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* ===== Footer ===== */
 footer {
-    background-color: #0d6b63;
-    color: #fff;
-    text-align: center;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+  background-color: #0d6b63;
+  color: #fff;
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 /* ===== Headings ===== */
-h1, h2, h3 {
-    font-weight: 700;
-    color: #0d6b63;
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  color: #0d6b63;
 }
 
 /* ===== Spacing Utilities ===== */
 .py-5 {
-    padding-top: 3rem !important;
-    padding-bottom: 3rem !important;
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
 }
 
 .mt-5 {
-    margin-top: 3rem !important;
+  margin-top: 3rem !important;
 }
 
 .mb-5 {
-    margin-bottom: 3rem !important;
+  margin-bottom: 3rem !important;
 }
 
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2rem;
-    }
-    .hero p {
-        font-size: 1rem;
-    }
-    .navbar-nav {
-        text-align: center;
-    }
-    .navbar-nav .nav-link {
-        margin-left: 0;
-        margin-bottom: 10px;
-    }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .navbar-nav {
+    text-align: center;
+  }
+  .navbar-nav .nav-link {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
 }
-footer{
-    background: linear-gradient(rgba(13,75,99,0.85), rgba(13,107,99,0.85)), url('https://images.unsplash.com/photo-1617196039272-0b9d9d29f8a0?auto=format&fit=crop&w=1950&q=80') no-repeat center center;
+footer {
+  background: linear-gradient(rgba(13, 75, 99, 0.85), rgba(13, 107, 99, 0.85)),
+    url("https://images.unsplash.com/photo-1617196039272-0b9d9d29f8a0?auto=format&fit=crop&w=1950&q=80")
+      no-repeat center center;
+}
+#insta-button {
+  background: #833ab4; /* Fallback for older browsers */
+  background: linear-gradient(
+    45deg,
+    #405de6 0%,
+    /* Royal Blue */ #5851db 15%,
+    /* Medium Purple */ #833ab4 30%,
+    /* Purple */ #c13584 45%,
+    /* Dark Pink */ #e1306c 60%,
+    /* Red Pink */ #fd1d1d 75%,
+    /* Torch Red */ #f56040 90%,
+    /* Orange */ #fcaf45 100% /* Yellow Orange */
+  );
 }
 #theme-toggle {
-    margin-left: 10px;
-    margin-right: 10px;
-    height: 100%;
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 100%;
+}
+/* Floating chatbot button */
+#chatbot-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #0d6b63;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 2000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+#chatbot-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* Chatbox */
+#chatbot-box {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 320px;
+  max-height: 420px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  z-index: 2000;
+  font-size: 14px;
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+#chatbot-box.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+#chatbot-header {
+  background: #0d6b63;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 16px 16px 0 0;
+}
+#chatbot-header button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+#chatbot-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.chat-message {
+  margin-bottom: 8px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  max-width: 80%;
+  word-wrap: break-word;
+  animation: fadeIn 0.2s ease;
+}
+.user {
+  background: #0d6b63;
+  color: white;
+  align-self: flex-end;
+  margin-left: auto;
+}
+.bot {
+  background: #f1f1f1;
+  color: black;
+  align-self: flex-start;
+  margin-right: auto;
+}
+
+#chatbot-input-area {
+  display: flex;
+  border-top: 1px solid #ddd;
+}
+#chatbot-input {
+  flex: 1;
+  border: none;
+  padding: 10px;
+  border-radius: 0 0 0 16px;
+  outline: none;
+}
+#chatbot-send {
+  background: #0d6b63;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 0 0 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+#resources {
+  background-color: white;
 }
