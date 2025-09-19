@@ -137,7 +137,9 @@ h3 {
   font-weight: 700;
   color: #20c997;
 }
-
+#resources {
+    background-color: #212121;
+}
 /* ===== Spacing Utilities ===== */
 .py-5 {
   padding-top: 3rem !important;
